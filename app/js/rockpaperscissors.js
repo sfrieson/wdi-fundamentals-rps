@@ -75,7 +75,8 @@ function playToFive() {
 		var play=getPlayerMove();
 		var comp=getComputerMove();
 		var winner=getWinner(play, comp);
-	    console.log("In round "+round+", Player chose "+play+" and the computer chose "+comp+". The winner is the "+winner+".");
+	    console.log("In round "+round+", Player chose "+play+", and the computer chose "+comp+". The winner of this round is the "+winner+".");
+		console.log("The current score is "+playerWins+" to "+computerWins+" (player to computer).");
 		if (winner==="player"){
 			playerWins++;
 		}else {
@@ -86,4 +87,4 @@ function playToFive() {
 	return [playerWins, computerWins];
 }
 
-alert("The score was "+playToFive()+ "( Player, Computer).");
+console.log("The score was "+playToFive()+ "( Player, Computer).");
